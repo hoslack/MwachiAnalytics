@@ -1,0 +1,41 @@
+body {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.h-bg {
+	background: rgb(19, 25, 46);
+}
+
+a:hover {
+	color: #35c188;
+}
+
+a:active {
+	color: #35c188;
+}
+
+.name {
+	word-wrap: break-word;
+	font-weight: bold;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: 0 0;
+	color: white;
+	line-height: 1.25em;
+	letter-spacing: normal;
+	pointer-events: auto;
+	font: normal normal normal 24px/1.25em avenir-lt-w01_35-light1475496, sans-serif;
+	text-align: start;
+}
+
+svg {
+	fill: currentcolor;
+}
+
+.fs {
+	font-size: 2em;
+}

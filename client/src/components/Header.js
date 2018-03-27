@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import logo from '../logo.png';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 	render() {
 		return (
 			<div>
-				<header class="h-bg white tc pv4 avenir">
-					<a className="w3 h4" href="#" title="Home">
+				<header className="h-bg white tc pv4 avenir">
+					<a className="w3 h4" href="/" title="Home">
 						<img src={logo} className=" w3 h4 " alt="Mwachi Analytics" />
 					</a>
 					<br />
@@ -14,21 +15,21 @@ class Header extends Component {
 						Mwachi Analytics &amp; Consultancy
 					</span>
 
-					<h2 class="mt2 mb0 f6 fw4 ttu tracked">Data | Proof | Decisions</h2>
-					<nav class="bt bb tc mw7 center mt4">
-						<a class="f6 f5-l link bg-animate white dib pa3 ph4-l" href="/">
+					<h2 className="mt2 mb0 f6 fw4 ttu tracked">Data | Proof | Decisions</h2>
+					<nav className="bt bb tc mw7 center mt4">
+						<a className="f6 f5-l link bg-animate white dib pa3 ph4-l" href="/">
 							HOME
 						</a>
-						<a class="f6 f5-l link white dib pa3 ph4-l" href="/portfolio">
+						<Link to="/services" className="f6 f5-l link white dib pa3 ph4-l" href="/portfolio">
 							OUR SERVICES
-						</a>
-						<a class="f6 f5-l link white dib pa3 ph4-l" href="/shop">
+						</Link>
+						<a className="f6 f5-l link white dib pa3 ph4-l" href="/">
 							BLOG
 						</a>
-						<a class="f6 f5-l link white dib pa3 ph4-l" href="/about">
+						<a className="f6 f5-l link white dib pa3 ph4-l" href="/">
 							ABOUT US
 						</a>
-						<a class="f6 f5-l link white dib pa3 ph4-l" href="/contact">
+						<a className="f6 f5-l link white dib pa3 ph4-l" href="/">
 							CONTACT US
 						</a>
 					</nav>

@@ -2,13 +2,20 @@ body {
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 }
+.green {
+	color: #35c188;
+}
 
 .h-bg {
 	background: rgb(19, 25, 46);
 }
 
+.sv-bg {
+	background-color: #35c188;
+}
+
 a:hover {
-	color: #35c188;
+	color: gray;
 }
 
 a:active {

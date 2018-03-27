@@ -3,7 +3,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 .green {
-	color: #35c188;
+	color: #03806b;
 }
 
 .h-bg {
@@ -14,12 +14,16 @@ body {
 	background-color: #35c188;
 }
 
-a:hover {
-	color: gray;
+.gray-bg {
+	background-color: #f9f9fa;
 }
 
-a:active {
-	color: #35c188;
+a:hover {
+	color: #03806b;
+}
+
+link {
+	color: white;
 }
 
 .name {

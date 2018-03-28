@@ -22,8 +22,8 @@ a:hover {
 	color: #03806b;
 }
 
-link {
-	color: white;
+a {
+	color: #03806b;
 }
 
 .name {
@@ -49,4 +49,8 @@ svg {
 
 .fs {
 	font-size: 2em;
+}
+
+.modal-bg {
+	background-color: rgba(0, 0, 0, 0.3);
 }

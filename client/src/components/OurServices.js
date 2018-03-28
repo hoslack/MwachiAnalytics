@@ -7,6 +7,7 @@ class OurServices extends Component {
 			<div className="flex flex-column gray-bg">
 				<div className=" pv4 flex flex-wrap">
 					<RenderCard />
+					}
 				</div>
 			</div>
 		);

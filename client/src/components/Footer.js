@@ -1,90 +1,72 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Col, Container, Row, Footer } from 'mdbreact';
 
-const style = {
-	backgroundColor: '#13192E',
-	color: 'white',
-	textAlign: 'center',
-	position: 'fixed',
-	left: '0',
-	bottom: '0',
-	height: '30%',
-	width: '100%',
-};
-
-const phantom = {
-	display: 'block',
-	padding: '20px',
-	height: '60px',
-	width: '100%',
-};
-
-const social = {
-	display: 'flex',
-	listStyle: 'none',
-	paddingLeft: '47%',
-	paddingBottom: -20,
-	verticalAlign: 'baseline',
-	background: 0,
-};
-
-const Footer = () => {
-	return (
-		<div>
-			<div style={phantom} />
-			<div style={style}>
-				<span>
-					<a
-						className="link white "
-						target="_blank"
-						href="mailto:mwachianalytics@gmail.com"
-						rel="noopener noreferrer"
-					>
-						<span>mwachianalytics@gmail.com</span>
-					</a>
-				</span>
-				<br />
-				<span>Nairobi, &nbsp; Kenya</span>
-
-				<ul style={social}>
-					<li>
+class FooterPage extends React.Component {
+	render() {
+		return (
+			<Footer color="white" className="page-footer font-small pt-4 mt-4 ft-bg">
+				<hr />
+				<div className="text-center py-3">
+					<span>
 						<a
+							className="link white "
 							target="_blank"
-							href="https://www.linkedin.com/in/mwachi-simon-050825119/"
+							href="mailto:mwachianalytics@gmail.com"
 							rel="noopener noreferrer"
 						>
-							<i className="fab fa-linkedin-in" />
+							<span>mwachianalytics@gmail.com</span>
 						</a>
-					</li>
-					&nbsp; &nbsp; &nbsp;
-					<li>
-						<a
-							target="_blank"
-							href="https://www.facebook.com/MwachiAnalytics"
-							rel="noopener noreferrer"
-						>
-							<i className="fab fa-facebook" />
+						<br />
+					</span>
+					<span>Nairobi, &nbsp; Kenya</span>
+				</div>
+				<hr />
+				<div className="text-center">
+					<ul className="list-unstyled list-inline">
+						<li className="list-inline-item">
+							<a
+								className="btn-floating btn-sm btn-fb mx-1"
+								target="_blank"
+								href="https://www.facebook.com/MwachiAnalytics"
+								rel="noopener noreferrer"
+							>
+								<i className="fab fa-facebook white" />
+							</a>
+						</li>
+						<li className="list-inline-item">
+							<a
+								className="btn-floating btn-sm btn-tw mx-1"
+								target="_blank"
+								href="https://www.twitter.com/MwachiAnalytics/"
+								rel="noopener noreferrer"
+							>
+								<i className="fab fa-twitter white" />
+							</a>
+						</li>
+						<li className="list-inline-item">
+							<a
+								className="btn-floating btn-sm btn-li mx-1"
+								target="_blank"
+								href="https://www.linkedin.com/in/mwachi-simon-050825119/"
+								rel="noopener noreferrer"
+							>
+								<i className="fab fa-linkedin white" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="footer-copyright text-center">
+					<Container fluid>
+						&copy; {new Date().getFullYear()} Copyright:{' '}
+						<a href="github.com/hoslack" className="text-light">
+							{' '}
+							Ghub Tech{' '}
 						</a>
-					</li>
-					&nbsp; &nbsp; &nbsp;
-					<li>
-						<a
-							target="_blank"
-							href="https://www.twitter.com/MwachiAnalytics/"
-							rel="noopener noreferrer"
-						>
-							<i className="fab fa-twitter" />
-						</a>
-					</li>
-				</ul>
-				<br />
-				<br />
+					</Container>
+				</div>
+			</Footer>
+		);
+	}
+}
 
-				<span>
-					Copyright<i className="fa fa-fw fa-copyright" />2017 Ghub Tech. All rights reserved.
-				</span>
-			</div>
-		</div>
-	);
-};
-
-export default Footer;
+export default FooterPage;

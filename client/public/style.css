@@ -1,3 +1,43 @@
-.nav-bg {
-	background-color: #03806b;
+.white {
+	color: white;
 }
+
+.nav-bg {
+	background-color: #0f6f5c;
+}
+
+.nav-link:hover {
+	color: #35c188;
+}
+.nav-item:hover {
+	color: #fff;
+}
+
+.ft-bg {
+	background-color: #13192e;
+}
+
+.footer-paddding {
+	padding-bottom: 50%;
+}
+.card {
+	width: 18rem;
+}
+
+.card-img {
+	height: 200px;
+	width: 120px;
+}
+
+.services {
+	padding-top: 200px;
+}
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.bg-gray {
+	background-color: gray !important;
+}
+

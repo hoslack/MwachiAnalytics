@@ -39,32 +39,21 @@ class RenderCard extends Component {
 	render() {
 		return data.map((item, index) => {
 			return (
-				<article key={index} className="bg-white mw6 mv4 w-49 pa3 mr2 center green br4 shadow-5">
-					<img src={item.image} className="w5 h4 db cover" alt={item.topic} />
-					<div className="pa3">
-						<a href="/" onClick={this.onOpenModal} className="link dim lh-title">
-							{item.topic}
-							<small className="gray db pv2">Check Details</small>
-						</a>
+				<div className="row">
+					<div key={index} class="card col-md-8 col-md-offset-2 col-centered ">
+						<img class="card-img-top card-img" src={item.image} alt={item.topic} />
+						<div class="card-body">
+							<h5 class="card-title">{item.topic}</h5>
+							<p class="card-text">
+								Some quick example text to build on the card title and make up the bulk of the
+								card's content.
+							</p>
+							<a href="/" onClick={this.onOpenModal} class="btn btn-primary">
+								Read More...
+							</a>
+						</div>
 					</div>
-					<Modal className="modal" open={this.state.open} onClose={this.onCloseModal} showCloseIcon>
-						<form onSubmit={this.handleSubmit} className="green">
-							<Select
-								required
-								name="option"
-								value={this.state.selectedOption}
-								onChange={this.handleChange}
-								options={item.values}
-							/>
-							<button
-								className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-green"
-								type="submit"
-							>
-								Submit
-							</button>
-						</form>
-					</Modal>
-				</article>
+				</div>
 			);
 		});
 	}

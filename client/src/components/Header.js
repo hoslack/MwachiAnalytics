@@ -1,50 +1,71 @@
 import React, { Component } from 'react';
 import logo from '../images/logo1.jpeg';
 
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap';
-
-const nav_custom = {
-	backgroundColor: '#13192E',
-	border: 'none',
-};
-
 class Header extends Component {
 	constructor(props) {
 		super(props);
-
-		this.toggle = this.toggle.bind(this);
 		this.state = {
-			isOpen: false,
+			collapse: false,
+			isWideEnough: false,
+			dropdownOpen: false,
 		};
+		this.onClick = this.onClick.bind(this);
+		this.toggle = this.toggle.bind(this);
 	}
-	toggle() {
+
+	onClick() {
 		this.setState({
-			isOpen: !this.state.isOpen,
+			collapse: !this.state.collapse,
 		});
 	}
+
+	toggle() {
+		this.setState({
+			dropdownOpen: !this.state.dropdownOpen,
+		});
+	}
+
 	render() {
 		return (
-			<div>
-				<Image src={logo} responsive alt="Mwachi Analytics" />
-				<Navbar inverse collapseOnSelect style={nav_custom}>
-					<Navbar.Header>
-						<Navbar.Brand>
-							<a href="#brand">Home</a>
-						</Navbar.Brand>
-						<Navbar.Toggle />
-					</Navbar.Header>
-					<Navbar.Collapse>
-						<Nav>
-							<NavItem href="#">Our Services</NavItem>
-							<NavItem href="#">Blog</NavItem>
-							<NavItem href="#">About Us</NavItem>
-							<NavItem href="#">Contact Us</NavItem>
-						</Nav>
-					</Navbar.Collapse>
-				</Navbar>
+			<div className="bg-white">
+				<img src={logo} class="img-fluid" alt="Responsive image" />
+				<nav class="navbar navbar-expand-lg nav-bg">
+					<a class="navbar-brand text-light" href="/">
+						Home
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon" />
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link text-light" href="/services">
+									Our Services
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-light" href="/blog">
+									Blog
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-light" href="/about">
+									About Us
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 			</div>
 		);
 	}
 }
-
 export default Header;

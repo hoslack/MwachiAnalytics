@@ -40,7 +40,7 @@ class RenderCard extends Component {
 		return data.map((item, index) => {
 			return (
 				<article key={index} className="bg-white mw6 mv4 w-49 pa3 mr2 center green br4 shadow-5">
-					<img src={item.image} className="w-100 db" alt={item.topic} />
+					<img src={item.image} className="w5 h4 db cover" alt={item.topic} />
 					<div className="pa3">
 						<a href="/" onClick={this.onOpenModal} className="link dim lh-title">
 							{item.topic}

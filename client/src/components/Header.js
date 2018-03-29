@@ -1,33 +1,47 @@
 import React, { Component } from 'react';
 import logo from '../images/logo1.jpeg';
-import { Link } from 'react-router-dom';
+
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Image } from 'react-bootstrap';
+
+const nav_custom = {
+	backgroundColor: '#13192E',
+	border: 'none',
+};
 
 class Header extends Component {
+	constructor(props) {
+		super(props);
+
+		this.toggle = this.toggle.bind(this);
+		this.state = {
+			isOpen: false,
+		};
+	}
+	toggle() {
+		this.setState({
+			isOpen: !this.state.isOpen,
+		});
+	}
 	render() {
 		return (
 			<div>
-				<header className="h-bg green tc pv4 avenir">
-					<a className="w8 h5" href="/" title="Home">
-						<img src={logo} className=" w8 h5" alt="Mwachi Analytics" />
-					</a>
-					<nav className="bt bb white tc mw7 center mt4">
-						<a className="f6 f5-l link white bg-animate b dib pa3 ph4-l" href="/">
-							HOME
-						</a>
-						<Link to="/services" className="f6 f5-l link white b dib pa3 ph4-l" href="/portfolio">
-							OUR SERVICES
-						</Link>
-						<a className="f6 f5-l link white b dib pa3 ph4-l" href="/">
-							BLOG
-						</a>
-						<a className="f6 f5-l link white b dib pa3 ph4-l" href="/">
-							ABOUT US
-						</a>
-						<a className="f6 f5-l link white b dib pa3 ph4-l" href="/">
-							CONTACT US
-						</a>
-					</nav>
-				</header>
+				<Image src={logo} responsive alt="Mwachi Analytics" />
+				<Navbar inverse collapseOnSelect style={nav_custom}>
+					<Navbar.Header>
+						<Navbar.Brand>
+							<a href="#brand">Home</a>
+						</Navbar.Brand>
+						<Navbar.Toggle />
+					</Navbar.Header>
+					<Navbar.Collapse>
+						<Nav>
+							<NavItem href="#">Our Services</NavItem>
+							<NavItem href="#">Blog</NavItem>
+							<NavItem href="#">About Us</NavItem>
+							<NavItem href="#">Contact Us</NavItem>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
 			</div>
 		);
 	}

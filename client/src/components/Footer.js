@@ -30,7 +30,7 @@ class FooterPage extends React.Component {
 								href="https://www.facebook.com/MwachiAnalytics"
 								rel="noopener noreferrer"
 							>
-								<i className="fab fa-facebook white" />
+								<i className="fab fa-facebook white big-icon" />
 							</a>
 						</li>
 						<li className="list-inline-item">
@@ -40,7 +40,7 @@ class FooterPage extends React.Component {
 								href="https://www.twitter.com/MwachiAnalytics/"
 								rel="noopener noreferrer"
 							>
-								<i className="fab fa-twitter white" />
+								<i className="fab fa-twitter white big-icon" />
 							</a>
 						</li>
 						<li className="list-inline-item">
@@ -50,7 +50,7 @@ class FooterPage extends React.Component {
 								href="https://www.linkedin.com/in/mwachi-simon-050825119/"
 								rel="noopener noreferrer"
 							>
-								<i className="fab fa-linkedin white" />
+								<i className="fab fa-linkedin white big-icon" />
 							</a>
 						</li>
 					</ul>

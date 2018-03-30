@@ -1,3 +1,6 @@
+body {
+	font-size: 2em !important;
+}
 .white {
 	color: white;
 }
@@ -14,30 +17,33 @@
 }
 
 .ft-bg {
-	background-color: #13192e;
+	background-color: #23282e;
 }
 
 .footer-paddding {
-	padding-bottom: 50%;
-}
-.card {
-	width: 18rem;
+	padding-bottom: 100px;
 }
 
-.card-img {
-	height: 200px;
-	width: 120px;
+body {
+	margin-top: 50px;
+}
+.glyphicon {
+	margin-right: 10px;
+}
+.panel-body {
+	padding: 0px;
+}
+.panel-body table tr td {
+	padding-left: 15px;
+}
+.panel-body .table {
+	margin-bottom: 0px;
 }
 
-.services {
-	padding-top: 200px;
-}
-.col-centered {
-	float: none;
-	margin: 0 auto;
+.big-icon {
+	font-size: 32px;
 }
 
-.bg-gray {
-	background-color: gray !important;
+.myopacity {
+	opacity: 0.5;
 }
-

@@ -28,12 +28,19 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="bg-white">
-				<img src={logo} class="img-fluid" alt="Responsive image" />
+				<div className="row">
+					<img src={logo} class="img-fluid col-md-7" alt="Responsive image" />
+					<h1 class="col-md-5 pt-5 mx-auto text-warning">
+						<q>
+							<strong>Statistical Support, Training, Analysis and Advice</strong>
+						</q>
+					</h1>
+				</div>
 				<nav class="navbar navbar-expand-lg nav-bg">
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav">
 							<li class="nav-item active">
-								<a class="nav-link text-light" href="/services">
+								<a class="nav-link text-light" href="/">
 									HOME
 								</a>
 							</li>
@@ -43,12 +50,12 @@ class Header extends Component {
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-light" href="/blog">
+								<a class="nav-link text-light" href="/">
 									BLOG
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-light" href="/about">
+								<a class="nav-link text-light" href="/">
 									ABOUT
 								</a>
 							</li>

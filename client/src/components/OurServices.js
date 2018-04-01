@@ -13,13 +13,13 @@ class OurServices extends Component {
 		return (
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-5 col-md-5">
+					<div class="col-sm-4 col-md-4">
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-											<span class="glyphicon glyphicon-th" />ACADEMIC RESEARCH
+											<span class="glyphicon glyphicon-th" />ACADEMIC SUPPORT
 										</a>
 									</h4>
 								</div>
@@ -90,7 +90,7 @@ class OurServices extends Component {
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-7 col-md-7">
+					<div class="col-sm-8 col-md-8">
 						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner" role="listbox">
 								<div class="carousel-item active">

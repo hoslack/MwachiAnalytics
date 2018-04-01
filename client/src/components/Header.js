@@ -29,7 +29,7 @@ class Header extends Component {
 		return (
 			<div className="bg-white">
 				<div className="row">
-					<img src={logo} class="img-fluid col-md-7" alt="Responsive image" />
+					<img src={logo} class="img-fluid col-md-7" alt="logo" />
 					<h1 class="col-md-5 pt-5 mx-auto text-warning">
 						<q>
 							<strong>Statistical Support, Training, Analysis and Advice</strong>

@@ -180,3 +180,6 @@ header.masthead p {
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
+.resp-modal {
+	margin-top: 200px;
+}

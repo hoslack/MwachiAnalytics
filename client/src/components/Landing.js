@@ -7,7 +7,7 @@ const Landing = () => {
 				<div className="row ">
 					<div className="col-lg-10 mx-auto">
 						<h1 className="text-uppercase ">
-							<strong>Mwachi Analytics & Consultancy</strong>
+							<strong>Mwachi Data Labs and Consult Group</strong>
 						</h1>
 						<h2>
 							<strong>We Come Up with Reliable Insights From Data</strong>

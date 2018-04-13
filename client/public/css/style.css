@@ -183,3 +183,6 @@ header.masthead p {
 .topquote {
 	font-size: 2em;
 }
+select {
+	font: inherit;
+}

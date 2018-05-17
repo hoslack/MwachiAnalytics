@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import AcademicResearch from './AcademicResearch';
 import DataAnalysis from './DataAnalysis';
 import AnalysisTraining from './AnalysisTraining';
@@ -11,6 +12,34 @@ class OurServices extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const phone_number = event.target.phone_number.value;
+    const problem_statement = event.target.problem_statement.value;
+    const leading_channel = event.target.leading_channel.value;
+    const project_type = event.target.project_type.value;
+    const preferred_software = event.target.preferred_software.value;
+    const description = event.target.description.value;
+    const request_data = {
+      name,
+      email,
+      phone_number,
+      problem_statement,
+      leading_channel,
+      project_type,
+      preferred_software,
+      description,
+    };
+    axios
+      .post('http://127.0.0.1:5000/orders/', request_data)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+
+    document.getElementById('closeModal').click();
   }
 
   render() {
@@ -28,13 +57,13 @@ class OurServices extends Component {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-body">
-                <form className="montform" id="reused_form">
+                <form className="montform" id="reused_form" onSubmit={this.handleSubmit}>
                   <span>Book Service</span>
                   <div className="form-group">
                     <input
                       name="name"
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       required
                       placeholder="Name"
                     />
@@ -44,72 +73,74 @@ class OurServices extends Component {
                       name="email"
                       type="email"
                       required
-                      class="form-control"
+                      className="form-control"
                       placeholder="Email"
                     />
                   </div>
                   <div className="form-group">
                     <input
-                      name="phone"
+                      name="phone_number"
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       required
                       placeholder="Phone"
                     />
                   </div>
                   <div className="form-group">
                     <input
-                      name="query"
+                      name="problem_statement"
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       required
                       placeholder="How may we help you?"
                       id="query"
                     />
                   </div>
                   <div className="form-group">
-                    <select name="referer" className="form-control">
+                    <select name="leading_channel" className="form-control">
                       <option value="">How did you here about us?</option>
                       <option value="" />
                       <option value="Internet Search">Internet Search</option>
                       <option value="Recommended by friend">Recommended by friend</option>
                       <option value="Social Media">Social Media</option>
-                      <option value="other">other</option>
+                      <option value="Other">other</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <select name="project-type" placeholder="heeee" className="form-control">
+                    <select name="project_type" placeholder="heeee" className="form-control">
                       <option value="">Project Type</option>
                       <option value="" />
                       <option value="Student">Student</option>
-                      <option value=" Corporation"> Corporation</option>
-                      <option value=" Nonprofit"> Nonprofit</option>
-                      <option value=" Other"> Other</option>
+                      <option value="Corporation"> Corporation</option>
+                      <option value="Nonprofit"> Nonprofit</option>
+                      <option value="Other"> Other</option>
                     </select>
                   </div>
                   <div className="form-group">
                     <input
-                      name="software"
+                      name="preferred_software"
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       required
                       placeholder="Prefered Softwares?"
                     />
                   </div>
                   <div className="form-group">
-                    <textarea name="message" className="form-control" placeholder="Message" />
+                    <textarea name="description" className="form-control" placeholder="Message" />
                   </div>
                   <div className="form-group">
-                    <button type="submit" className="btn btn-primary pull-left">
-											SUBMIT
-                    </button>
                     <button
                       type="button"
-                      className="btn btn-danger pull-right"
+                      id="closeModal"
+                      className="btn btn-danger pull-left"
                       data-dismiss="modal"
                     >
-											Close
+                      Close
                     </button>
+                    <button type="submit" className="btn btn-primary pull-right">
+                      SUBMIT
+                    </button>
+
                     <div className="ease" />
                   </div>
                 </form>
@@ -133,7 +164,9 @@ class OurServices extends Component {
                 <div id="collapseTwo" className="panel-collapse collapse">
                   <div className="panel-body">
                     <table className="table">
-                      <AcademicResearch />
+                      <tbody>
+                        <AcademicResearch />
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -149,7 +182,9 @@ class OurServices extends Component {
                 <div id="collapseThree" className="panel-collapse collapse">
                   <div className="panel-body">
                     <table className="table">
-                      <DataAnalysis />
+                      <tbody>
+                        <DataAnalysis />
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -165,7 +200,9 @@ class OurServices extends Component {
                 <div id="collapseFour" className="panel-collapse collapse">
                   <div className="panel-body">
                     <table className="table">
-                      <AnalysisTraining />
+                      <tbody>
+                        <AnalysisTraining />
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -181,30 +218,32 @@ class OurServices extends Component {
                 <div id="collapseFive" className="panel-collapse collapse">
                   <div className="panel-body">
                     <table className="table">
-                      <tr>
-                    <td>
-                    <button
-                    className="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#myModalHorizontal"
-                    href="#"
-                  >
-														ADVISING
-                  </button>
-                  </td>
-                  </tr>
-                      <tr>
-                    <td>
-                    <button
-                    className="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#myModalHorizontal"
-                    href="#"
-                  >
-														CONSULTING
-                  </button>
-                  </td>
-                  </tr>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <button
+                              className="btn btn-primary"
+                              data-toggle="modal"
+                              data-target="#myModalHorizontal"
+                              href="#"
+                            >
+                              ADVISING
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button
+                              className="btn btn-primary"
+                              data-toggle="modal"
+                              data-target="#myModalHorizontal"
+                              href="#"
+                            >
+                              CONSULTING
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -219,10 +258,10 @@ class OurServices extends Component {
                   <div className="carousel-caption d-none d-md-block nav-bg myopacity">
                     <h1>Reliable Services. Meaningful Insights.</h1>
                     <p>
-											At Mwachi Analytics & Consultancy, your needs come first. We tailor all our
-											services to suit each client, because no two businesses are alike. Our experts
-											develop ideas that solve our clients’ most complex and pressing data
-											challenges. Below are just a few of the ways we can help you:
+                      At Mwachi Analytics & Consultancy, your needs come first. We tailor all our
+                      services to suit each client, because no two businesses are alike. Our experts
+                      develop ideas that solve our clients’ most complex and pressing data
+                      challenges. Below are just a few of the ways we can help you:
                     </p>
                   </div>
                 </div>

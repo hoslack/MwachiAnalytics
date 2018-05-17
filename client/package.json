@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@types/react": "^16.0.40",
+    "axios": "^0.18.0",
+    "jquery": "^1.9.1",
     "mdbreact": "^4.2.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",

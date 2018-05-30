@@ -34,10 +34,7 @@ class OurServices extends Component {
       preferred_software,
       description,
     };
-    axios
-      .post('http://127.0.0.1:5000/orders/', request_data)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+    console.log(request_data);
 
     document.getElementById('closeModal').click();
   }

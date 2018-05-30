@@ -8,8 +8,9 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 const host = process.env.HOST || 'localhost';
+const db_url = 'mongodb://hos:amondi99@localhost:27017/mwachi';
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,7 +23,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(db_url);
 
 mongoose.connection.on('error', (err) => {
   console.log(`Mongoose default connection error: ${err}`);

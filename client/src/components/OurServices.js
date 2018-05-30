@@ -34,7 +34,14 @@ class OurServices extends Component {
       preferred_software,
       description,
     };
-    console.log(request_data);
+    axios
+      .post('/api/orders', request_data)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     document.getElementById('closeModal').click();
   }

@@ -5,6 +5,8 @@ const passport = require('passport');
 const cookieSession = require('cookie-session');
 require('env2')('./.env');
 const authRoutes = require('./routes/authRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+
 
 const app = express();
 
@@ -37,4 +39,5 @@ mongoose.connection.on('connected', () => {
 });
 
 app.use('/auth', authRoutes);
+app.use('/api', orderRoutes);
 

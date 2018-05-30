@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import logo from '../images/logo.jpg';
 
 class Header extends Component {
@@ -8,9 +9,40 @@ class Header extends Component {
       collapse: false,
       isWideEnough: false,
       dropdownOpen: false,
+      currentUser: '',
     };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.renderContent = this.renderContent.bind(this);
+  }
+
+  componentDidMount() {
+    axios
+      .get('auth/current_user')
+      .then((user) => {
+        this.setState({ currentUser: user.data });
+      })
+      .catch(err => err);
+  }
+
+  renderContent() {
+    switch (this.state.currentUser) {
+      case null:
+        return;
+      case '':
+        return (
+          <a className="btn btn-danger custom-button-width .navbar-right" href="/auth/google">Google Login</a>
+        );
+      default:
+        return (
+          <div className="btn-toolbar">
+            <button className="btn btn-danger custom-button-width .navbar-right">{this.state.currentUser.email}</button>
+            <a className="btn btn-danger custom-button-width .navbar-right" href="/auth/logout">
+              Logout
+            </a>
+          </div>
+        );
+    }
   }
 
   onClick() {
@@ -61,6 +93,7 @@ class Header extends Component {
               </li>
             </ul>
           </div>
+          {this.renderContent()}
         </nav>
       </div>
     );

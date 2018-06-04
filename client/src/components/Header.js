@@ -31,12 +31,16 @@ class Header extends Component {
         return;
       case '':
         return (
-          <a className="btn btn-danger custom-button-width .navbar-right" href="/auth/google">Google Login</a>
+          <a className="btn btn-danger custom-button-width .navbar-right" href="/auth/google">
+            Google Login
+          </a>
         );
       default:
         return (
           <div className="btn-toolbar">
-            <button className="btn btn-danger custom-button-width .navbar-right">{this.state.currentUser.email}</button>
+            <button className="btn btn-danger custom-button-width .navbar-right">
+              {this.state.currentUser.email}
+            </button>
             <a className="btn btn-danger custom-button-width .navbar-right" href="/auth/logout">
               Logout
             </a>
@@ -73,22 +77,22 @@ class Header extends Component {
             <ul className="navbar-nav">
               <li className="nav-item active">
                 <a className="nav-link text-light" href="/">
-									HOME
+                  HOME
                 </a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link text-light" href="/services">
-									SERVICES
+                  SERVICES
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-light" href="/">
-									BLOG
+                  BLOG
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="/">
-									ABOUT
+                <a className="nav-link text-light" href="/orders">
+                  ORDERS
                 </a>
               </li>
             </ul>

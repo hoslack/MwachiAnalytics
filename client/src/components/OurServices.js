@@ -35,9 +35,13 @@ class OurServices extends Component {
       description,
     };
     axios
-      .post('http://127.0.0.1:5000/orders/', request_data)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+      .post('/api/orders', request_data)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     document.getElementById('closeModal').click();
   }

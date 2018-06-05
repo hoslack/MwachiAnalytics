@@ -1,17 +1,23 @@
 import React from 'react';
 
-const data = [1, 1, 1, 1, 1, 1];
 
 const OrdersTable = props =>
-  data.map((item, index) => (
+  props.data.map((item, index) => (
     <tr key={index}>
-      <th scope="row">{index + 1}</th>
-      <th scope="col">Name</th>
-      <th scope="col">Number</th>
-      <th scope="col">Email</th>
-      <th scope="col">Problem statement</th>
-      <th scope="col">Project Type</th>
-      <th scope="col">Software</th>
+      <td>{index + 1}</td>
+      <td>{item.name}</td>
+      <td>{item.phone_number}</td>
+      <td>{item.email}</td>
+      <td>{item.problem_statement}</td>
+      <td><button
+        onClick={() => props.vieworder(item._id)}
+        className="btn btn-primary"
+        data-toggle="modal"
+        data-target="#myModalHorizontal"
+      >
+        view
+      </button>
+      </td>
     </tr>
   ));
 export default OrdersTable;

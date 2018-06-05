@@ -86,13 +86,13 @@ class Header extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="/">
-                  BLOG
+                <a className="nav-link text-light" href="/orders">
+                  ORDERS
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="/orders">
-                  ORDERS
+                <a className="nav-link text-light" href="https://medium.com/@hoslackochieng" target="_blank">
+                  BLOG
                 </a>
               </li>
             </ul>

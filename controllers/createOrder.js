@@ -3,7 +3,6 @@ const Order = require('../models/Order');
 module.exports = (req, res) => {
   const {
     name,
-    email,
     phone_number,
     problem_statement,
     leading_channel,
@@ -14,7 +13,7 @@ module.exports = (req, res) => {
 
   const order = new Order({
     name,
-    email,
+    email: req.user.email,
     phone_number,
     problem_statement,
     leading_channel,

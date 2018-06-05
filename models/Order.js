@@ -12,6 +12,11 @@ const orderSchema = Schema({
   project_type: String,
   preferred_software: String,
   description: String,
+  done:
+        {
+          type: Boolean,
+          default: false,
+        },
 });
 
 module.exports = mongoose.model('order', orderSchema);

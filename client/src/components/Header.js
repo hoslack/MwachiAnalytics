@@ -94,6 +94,14 @@ class Header extends Component {
               <li className="nav-item">
                 <a
                   className="nav-link text-light"
+                  href="/about"
+                >
+                  ABOUT US
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link text-light"
                   href="https://medium.com/@hoslackochieng"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -6,6 +6,7 @@ import Landing from './Landing';
 import Footer from './Footer';
 import Services from './OurServices';
 import Orders from './Orders';
+import About from './About';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/orders" component={Orders} />
+          <Route exact path="/about" component={About} />
           <Footer />
         </div>
       </BrowserRouter>

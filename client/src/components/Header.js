@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from '../images/logo.jpg';
+import logo from '../images/logo.jpeg';
+
 
 class Header extends Component {
   constructor(props) {

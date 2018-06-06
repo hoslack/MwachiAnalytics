@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from '../images/logo.jpg';
+import logo from '../images/logo.jpeg';
+
 
 class Header extends Component {
   constructor(props) {
@@ -91,7 +92,12 @@ class Header extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="https://medium.com/@hoslackochieng" target="_blank">
+                <a
+                  className="nav-link text-light"
+                  href="https://medium.com/@hoslackochieng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   BLOG
                 </a>
               </li>

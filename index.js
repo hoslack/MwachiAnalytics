@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 require('env2')('./.env');
+const path = require('path');
 const authRoutes = require('./routes/authRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 

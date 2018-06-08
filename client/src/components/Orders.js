@@ -77,6 +77,10 @@ class Orders extends Component {
                       <td className="table-primary">Description</td>
                       <td>{this.state.singleOrder.description}</td>
                     </tr>
+                    <tr>
+                      <td className="table-primary">Mode of Payment</td>
+                      <td>{this.state.singleOrder.payment}</td>
+                    </tr>
                   </tbody>
                 </table>
                 <button

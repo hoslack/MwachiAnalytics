@@ -83,7 +83,7 @@ class Header extends Component {
               </li>
               <li className="nav-item active">
                 <a className="nav-link text-light" href="/services">
-                  SERVICES
+                  BOOK SERVICES
                 </a>
               </li>
               <li className="nav-item">
@@ -102,7 +102,7 @@ class Header extends Component {
               <li className="nav-item">
                 <a
                   className="nav-link text-light"
-                  href="https://medium.com/@hoslackochieng"
+                  href="https://medium.com/@mwachi.datalabs"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

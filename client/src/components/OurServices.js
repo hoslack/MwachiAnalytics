@@ -17,30 +17,32 @@ class OurServices extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const name = event.target.name.value;
-    const email = event.target.email.value;
     const phone_number = event.target.phone_number.value;
     const problem_statement = event.target.problem_statement.value;
     const leading_channel = event.target.leading_channel.value;
     const project_type = event.target.project_type.value;
     const preferred_software = event.target.preferred_software.value;
     const description = event.target.description.value;
+    const payment = event.target.payment.value;
     const request_data = {
       name,
-      email,
       phone_number,
       problem_statement,
       leading_channel,
       project_type,
       preferred_software,
       description,
+      payment,
     };
     axios
       .post('/api/orders', request_data)
       .then((res) => {
         console.log(res.data);
+        alert('Your Order Has Been Submitted Successfully');
       })
       .catch((err) => {
         console.log(err);
+        alert('There was an error, please try submitting again!!');
       });
 
     document.getElementById('closeModal').click();
@@ -74,15 +76,6 @@ class OurServices extends Component {
                   </div>
                   <div className="form-group">
                     <input
-                      name="email"
-                      type="email"
-                      required
-                      className="form-control"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
                       name="phone_number"
                       type="text"
                       className="form-control"
@@ -111,7 +104,7 @@ class OurServices extends Component {
                     </select>
                   </div>
                   <div className="form-group">
-                    <select name="project_type" placeholder="heeee" className="form-control">
+                    <select name="project_type" className="form-control">
                       <option value="">Project Type</option>
                       <option value="" />
                       <option value="Student">Student</option>
@@ -128,6 +121,17 @@ class OurServices extends Component {
                       required
                       placeholder="Prefered Softwares?"
                     />
+                  </div>
+                  <div className="form-group">
+                    <select name="payment" className="form-control">
+                      <option value="">Mode of Payment Prefered</option>
+                      <option value="" />
+                      <option value="MPESA">MPESA</option>
+                      <option value="T-CASH">T-CASH</option>
+                      <option value="Airtel Money">Airtel Money</option>
+                      <option value="PayPal">PayPal</option>
+                      <option value="Airtel Money">VISA</option>
+                    </select>
                   </div>
                   <div className="form-group">
                     <textarea name="description" className="form-control" placeholder="Message" />

@@ -37,10 +37,6 @@ class OurServices extends Component {
       payment,
     };
 
-    if (!this.props.currentUser) {
-      alert('Please login first');
-      this.props.history.push('/');
-    }
 
     axios
       .post('/api/orders', request_data)

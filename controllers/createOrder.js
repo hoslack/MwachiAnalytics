@@ -8,6 +8,7 @@ module.exports = (req, res) => {
     leading_channel,
     project_type,
     preferred_software,
+    payment,
     description,
   } = req.body;
 
@@ -19,6 +20,7 @@ module.exports = (req, res) => {
     leading_channel,
     project_type,
     preferred_software,
+    payment,
     description,
   });
 

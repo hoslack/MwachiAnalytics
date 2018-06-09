@@ -15,6 +15,10 @@ class Orders extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.currentUser) {
+      alert('Please login first');
+      this.props.history.push('/');
+    }
     axios
       .get('api/orders')
       .then((res) => {
@@ -76,6 +80,10 @@ class Orders extends Component {
                     <tr>
                       <td className="table-primary">Description</td>
                       <td>{this.state.singleOrder.description}</td>
+                    </tr>
+                    <tr>
+                      <td className="table-primary">Mode of Payment</td>
+                      <td>{this.state.singleOrder.payment}</td>
                     </tr>
                   </tbody>
                 </table>

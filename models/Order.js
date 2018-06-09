@@ -12,6 +12,7 @@ const orderSchema = Schema({
   project_type: String,
   preferred_software: String,
   description: String,
+  payment: String,
   done:
         {
           type: Boolean,

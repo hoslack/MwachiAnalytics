@@ -45,12 +45,12 @@ if (process.env.NODE_ENV === 'production') {
   // like our main.js file, or main.css file!
   app.use('/auth', authRoutes);
   app.use('/api', orderRoutes);
-  app.use(express.static('client/build'));
+  app.use(express.static('build'));
 
   // Express will serve up the index.html file
   // if it doesn't recognize the route
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
   });
 } else {
   app.use('/auth', authRoutes);

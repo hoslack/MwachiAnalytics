@@ -9,14 +9,35 @@ import Orders from './Orders';
 import About from './About';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: '',
+    };
+
+    this.updateUser = this.updateUser.bind(this);
+  }
+
+  updateUser(user) {
+    this.setState({ currentUser: user });
+  }
+
   render() {
     return (
       <BrowserRouter>
         <div className="">
-          <Header />
+          <Header updateUser={this.updateUser} />
           <Route exact path="/" component={Landing} />
-          <Route exact path="/services" component={Services} />
-          <Route exact path="/orders" component={Orders} />
+          <Route
+            exact
+            path="/services"
+            render={props => <Services currentUser={this.state.currentUser} {...props} />}
+          />
+          <Route
+            exact
+            path="/orders"
+            render={props => <Orders currentUser={this.state.currentUser} {...props} />}
+          />
           <Route exact path="/about" component={About} />
           <Footer />
         </div>

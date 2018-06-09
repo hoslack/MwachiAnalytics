@@ -15,6 +15,10 @@ class Orders extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.currentUser) {
+      alert('Please login first');
+      this.props.history.push('/');
+    }
     axios
       .get('api/orders')
       .then((res) => {

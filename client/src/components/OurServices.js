@@ -12,6 +12,8 @@ class OurServices extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
@@ -34,6 +36,12 @@ class OurServices extends Component {
       description,
       payment,
     };
+
+    if (!this.props.currentUser) {
+      alert('Please login first');
+      this.props.history.push('/');
+    }
+
     axios
       .post('/api/orders', request_data)
       .then((res) => {

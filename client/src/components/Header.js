@@ -22,6 +22,7 @@ class Header extends Component {
       .get('auth/current_user')
       .then((user) => {
         this.setState({ currentUser: user.data });
+        this.props.updateuser(user.data);
       })
       .catch(err => err);
   }
@@ -73,17 +74,20 @@ class Header extends Component {
             </q>
           </h1>
         </div>
-        <nav className="navbar navbar-expand-lg nav-bg">
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a className="navbar-brand" href="/">Menu</a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon" />
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link text-light" href="/">
-                  HOME
-                </a>
+                <a className="nav-link" href="/">HOME<span className="sr-only">(current)</span></a>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item ">
                 <a className="nav-link text-light" href="/services">
-                  BOOK SERVICES
+                  SERVICES
                 </a>
               </li>
               <li className="nav-item">
@@ -96,7 +100,7 @@ class Header extends Component {
                   className="nav-link text-light"
                   href="/about"
                 >
-                  ABOUT US
+                  ABOUT-US
                 </a>
               </li>
               <li className="nav-item">
@@ -110,8 +114,9 @@ class Header extends Component {
                 </a>
               </li>
             </ul>
+            {this.renderContent()}
+
           </div>
-          {this.renderContent()}
         </nav>
       </div>
     );

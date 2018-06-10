@@ -37,10 +37,6 @@ class OurServices extends Component {
       payment,
     };
 
-    if (!this.props.currentUser) {
-      alert('Please login first');
-      this.props.history.push('/');
-    }
 
     axios
       .post('/api/orders', request_data)
@@ -49,8 +45,13 @@ class OurServices extends Component {
         alert('Your Order Has Been Submitted Successfully');
       })
       .catch((err) => {
-        console.log(err);
-        alert('There was an error, please try submitting again!!');
+        if (err.response.status === 401) {
+          alert('Please Login to book a service');
+          this.props.history.push('/');
+        } else {
+          console.log(err.response.data);
+          alert('An error occured');
+        }
       });
 
     document.getElementById('closeModal').click();

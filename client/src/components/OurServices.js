@@ -45,8 +45,12 @@ class OurServices extends Component {
         alert('Your Order Has Been Submitted Successfully');
       })
       .catch((err) => {
-        console.log(err);
-        alert('There was an error, please try submitting again!!');
+        if (err.response.status === 401) {
+          alert('Please Login to book a service');
+          this.props.history.push('/');
+        } else {
+          console.log(err.response.data);
+        }
       });
 
     document.getElementById('closeModal').click();

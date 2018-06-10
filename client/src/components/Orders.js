@@ -20,7 +20,12 @@ class Orders extends Component {
       .then((res) => {
         this.setState({ data: res.data });
       }).catch((err) => {
-        console.log(err);
+        if (err.response.status === 401) {
+          alert('Please Login to see the orders');
+          this.props.history.push('/');
+        } else {
+          console.log(err.response.data);
+        }
       });
   }
 

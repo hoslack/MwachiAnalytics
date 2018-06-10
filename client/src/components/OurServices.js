@@ -50,6 +50,7 @@ class OurServices extends Component {
           this.props.history.push('/');
         } else {
           console.log(err.response.data);
+          alert('An error occured');
         }
       });
 

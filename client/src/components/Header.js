@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from '../images/logo.jpeg';
 
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -66,8 +65,8 @@ class Header extends Component {
   render() {
     return (
       <div className="bg-white">
-        <div className="row">
-          <img src={logo} className="img-fluid col-md-7" alt="logo" />
+        <div className="row logo_container">
+          <img src={logo} className="img-fluid col-md-7 mainlogo" alt="logo" />
           <h1 className="col-md-5 pt-5 mx-auto green text-center topquote">
             <q>
               <strong>Statistical Support, Training, Analysis and Advice</strong>
@@ -75,15 +74,27 @@ class Header extends Component {
           </h1>
         </div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="/">Menu</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a className="navbar-brand" href="/">
+            Menu
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon" />
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/">HOME<span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="/">
+                  HOME<span className="sr-only">(current)</span>
+                </a>
               </li>
               <li className="nav-item ">
                 <a className="nav-link text-light" href="/services">
@@ -96,10 +107,7 @@ class Header extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link text-light"
-                  href="/about"
-                >
+                <a className="nav-link text-light" href="/about">
                   ABOUT-US
                 </a>
               </li>
@@ -110,12 +118,11 @@ class Header extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  BLOG
+                  NEWS/BLOG
                 </a>
               </li>
             </ul>
             {this.renderContent()}
-
           </div>
         </nav>
       </div>

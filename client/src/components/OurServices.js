@@ -273,12 +273,11 @@ class OurServices extends Component {
                 <div className="carousel-item active">
                   <img className="d-block img-fluid" src={pic1} alt="First slide" />
                   <div className="carousel-caption d-none d-md-block nav-bg myopacity">
-                    <h1>Reliable Services. Meaningful Insights.</h1>
                     <p>
-                      At Mwachi Analytics & Consultancy, your needs come first. We tailor all our
+                      At Mwachi Datalabs and Consult Group, your needs come first. We tailor all our
                       services to suit each client, because no two businesses are alike. Our experts
                       develop ideas that solve our clients’ most complex and pressing data
-                      challenges. Below are just a few of the ways we can help you:
+                      challenges. See the menu for a few of the ways we can help you with.
                     </p>
                   </div>
                 </div>

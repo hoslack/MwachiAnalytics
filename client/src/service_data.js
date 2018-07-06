@@ -1,20 +1,20 @@
 export default [
-	{
-		topic: 'ACADEMIC SUPPORT',
-		values: ['Assignments', 'Term Papers', 'Statistical Essays'],
-	},
+  {
+    topic: 'ACADEMIC SUPPORT',
+    values: ['Data Science Essays', 'Term Papers', 'Research and Projects', 'Basic Statistical problems'],
+  },
 
-	{
-		topic: 'STATISTICAL DATA ANALYSIS',
-		values: ['Statistical Analysis', 'Exploratory data Analysis', 'Summary Statistics'],
-	},
+  {
+    topic: 'DATA ANALYSIS AND INSIGHTS',
+    values: ['Data Collection', 'Data Analysis', 'Summary Statistics and Reports'],
+  },
 
-	{
-		topic: 'STATISTICAL ANALYSIS TRAINING',
-		values: ['R', 'SPSS', 'STATA', 'Advanced Excel'],
-	},
-	{
-		topic: 'ADVISING AND CONSULTING',
-		values: ['ADVISING AND CONSULTING'],
-	},
+  {
+    topic: 'DATA TOOLS TRAINING',
+    values: ['R Support', 'SPSS Support', 'STATA Support', 'Advanced Excel', 'Other Tools'],
+  },
+  {
+    topic: 'ADVICE AND CONSULTING',
+    values: ['ADVISING AND CONSULTING'],
+  },
 ];

@@ -47,7 +47,7 @@ body {
 }
 
 .myopacity {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 body,
@@ -168,17 +168,17 @@ header.masthead p {
 .masthead {
 	margin-top: -20px;
 	margin-bottom: -20px;
-	opacity: 0.5;
+	opacity: 1;
 }
-.masthead {
+/*.masthead {
 	opacity: 0.7;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
-}
+}*/
 
-.masthead:hover {
+/*.masthead:hover {
 	opacity: 1;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
-}
+}*/
 
 .topquote {
 	font-size: 2em;
@@ -187,17 +187,64 @@ select {
 	font: inherit;
 }
 .Table-header {
-    background-color: #ccc;
-    color: blue;
-    padding: 10px;
-    text-align: left;
+	background-color: #ccc;
+	color: blue;
+	padding: 10px;
+	text-align: left;
 }
- 
- 
+
 .GeorgeMichael-Row {
-    background-color: plum;
+	background-color: plum;
 }
- 
+
 .Other-Row {
-    background-color: greenyellow;
+	background-color: greenyellow;
 }
+
+@media (max-width: 600px) {
+	.topquote {
+		display: none;
+	}
+
+.logo_container{
+	max-height: 120px;
+}
+}
+
+/*.carousel-caption {
+    top: 20%;
+}
+*/
+
+
+
+/*About */
+body {
+    font-family: 'Amaranth';font-size: 11px;
+}
+
+.site-title  {
+    padding: 2em 0;
+}
+.site-title h3 {
+    font-size: 2.5em;
+    color:   #154360 ;
+    font-weight: 700;
+}
+.site-title p {
+    font-size: 1.1em;
+    line-height: 1.8em;
+    margin-top: 0.5em;
+}
+
+.about-inner-column p {
+    font-size: 1.1em;
+    color: #333333;
+    line-height: 1.8em;
+    margin: 1em 0 0;
+}
+
+.about-right img {
+    width: 100%;
+}
+
